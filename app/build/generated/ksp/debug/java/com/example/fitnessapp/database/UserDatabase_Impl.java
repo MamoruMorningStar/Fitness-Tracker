@@ -172,3 +172,4 @@ public final class UserDatabase_Impl extends UserDatabase {
     }
   }
 }
+

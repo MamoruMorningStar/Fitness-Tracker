@@ -176,3 +176,4 @@ public final class AppDatabase_Impl extends AppDatabase {
     }
   }
 }
+

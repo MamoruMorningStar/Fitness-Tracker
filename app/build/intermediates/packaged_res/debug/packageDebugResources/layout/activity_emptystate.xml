@@ -79,3 +79,4 @@
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_nav_menu" />
 </RelativeLayout>
+
