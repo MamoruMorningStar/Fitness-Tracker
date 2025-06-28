@@ -66,3 +66,4 @@ com.example.fitnessapp-packageDebugResources-64 C:\Users\SpeedFire\AndroidStudio
 com.example.fitnessapp-debug-65 C:\Users\SpeedFire\AndroidStudioProjects\Fitness-Tracker\app\build\intermediates\merged_res\debug\mergeDebugResources
 com.example.fitnessapp-debug-66 C:\Users\SpeedFire\AndroidStudioProjects\Fitness-Tracker\app\src\debug\res
 com.example.fitnessapp-main-67 C:\Users\SpeedFire\AndroidStudioProjects\Fitness-Tracker\app\src\main\res
+

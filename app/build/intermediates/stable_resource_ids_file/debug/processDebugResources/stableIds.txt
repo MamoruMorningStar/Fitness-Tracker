@@ -5768,3 +5768,4 @@ com.example.fitnessapp:layout/mtrl_picker_header_fullscreen = 0x7f0c0068
 com.example.fitnessapp:dimen/m3_navigation_item_shape_inset_start = 0x7f0601c4
 com.example.fitnessapp:color/mtrl_tabs_icon_color_selector_colored = 0x7f0502ea
 com.example.fitnessapp:animator/m3_extended_fab_show_motion_spec = 0x7f020013
+
