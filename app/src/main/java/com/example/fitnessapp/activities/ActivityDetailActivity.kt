@@ -155,3 +155,4 @@ class ActivityDetailActivity : AppCompatActivity() {
         return "Финиш ${sdf.format(Date(endTime))}"
     }
 }
+

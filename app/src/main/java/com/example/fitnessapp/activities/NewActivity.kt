@@ -151,3 +151,4 @@ class NewActivity : AppCompatActivity() {
         return sdf.format(java.util.Date())
     }
 }
+

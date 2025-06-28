@@ -55,3 +55,4 @@ fun FitnessappTheme(
         content = content
     )
 }
+

@@ -25,3 +25,4 @@ interface ActivityDao {
     @Query("DELETE FROM activities WHERE id = :id")
     fun deleteActivityById(id: Int)
 }
+

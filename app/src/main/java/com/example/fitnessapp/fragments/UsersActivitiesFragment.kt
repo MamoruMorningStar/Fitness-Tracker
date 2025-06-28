@@ -49,3 +49,4 @@ class UsersActivitiesFragment : Fragment() {
         return view
     }
 }
+

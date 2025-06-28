@@ -8,3 +8,4 @@
         android:icon="@drawable/profile_button"
         android:title="@string/profile" />
 </menu>
+

@@ -176,3 +176,4 @@ class EmptystateActivity : AppCompatActivity() {
         const val REQUEST_CODE_DETAIL = 1
     }
 }
+

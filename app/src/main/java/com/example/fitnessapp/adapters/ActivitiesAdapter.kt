@@ -89,3 +89,4 @@ class ActivityAdapter(private val context: Context, private val activities: List
         }
     }
 }
+

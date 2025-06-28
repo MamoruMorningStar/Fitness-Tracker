@@ -74,3 +74,4 @@
         app:layout_constraintTop_toBottomOf="@id/register_button"
         app:strokeWidth="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+

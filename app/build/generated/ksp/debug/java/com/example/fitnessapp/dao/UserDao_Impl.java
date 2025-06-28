@@ -247,3 +247,4 @@ public final class UserDao_Impl implements UserDao {
     return Collections.emptyList();
   }
 }
+

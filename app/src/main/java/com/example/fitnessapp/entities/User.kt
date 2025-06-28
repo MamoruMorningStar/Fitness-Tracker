@@ -11,3 +11,4 @@ data class UserEntity(
     val password: String,
     val gender: String
 )
+

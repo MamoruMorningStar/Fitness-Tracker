@@ -15,3 +15,4 @@ data class ActivityEntity(
     val author: String,
     val comment: String?
 )
+

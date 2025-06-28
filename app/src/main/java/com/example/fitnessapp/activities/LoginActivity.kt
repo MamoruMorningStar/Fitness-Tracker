@@ -70,3 +70,4 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 }
+

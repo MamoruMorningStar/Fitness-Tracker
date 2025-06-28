@@ -2,3 +2,4 @@
     <item android:drawable="@android:color/transparent" android:state_checked="true"/>
     <item android:drawable="@android:color/transparent"/>
 </selector>
+

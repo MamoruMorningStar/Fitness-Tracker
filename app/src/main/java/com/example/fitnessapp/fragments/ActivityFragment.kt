@@ -16,3 +16,4 @@ class ActivityFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_activity, container, false)
     }
 }
+

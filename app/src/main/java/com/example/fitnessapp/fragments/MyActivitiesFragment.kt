@@ -47,3 +47,4 @@ class MyActivitiesFragment : Fragment() {
         return view
     }
 }
+

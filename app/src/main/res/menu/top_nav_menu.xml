@@ -8,3 +8,4 @@
         android:id="@+id/navigation_users_activity"
         android:title="@string/ppls_stats" />
 </menu>
+

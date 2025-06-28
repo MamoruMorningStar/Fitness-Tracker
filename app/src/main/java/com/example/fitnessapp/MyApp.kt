@@ -13,3 +13,4 @@ class MyApp : Application() {
         Log.d("MyApp", "Дб инит: ${database.openHelper.databaseName}")
     }
 }
+
