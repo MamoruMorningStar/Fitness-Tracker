@@ -6,21 +6,13 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import com.example.fitnessapp.R
-import com.example.fitnessapp.entities.UserEntity
-import com.example.fitnessapp.database.UserDatabase
-import kotlinx.coroutines.launch
 
 class RegisterActivity : AppCompatActivity() {
-
-    private lateinit var userDatabase: UserDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration_form)
-
-        userDatabase = UserDatabase.getDatabase(this)
 
         val loginEditText = findViewById<EditText>(R.id.login_edittext)
         val usernameEditText = findViewById<EditText>(R.id.username_edittext)
@@ -33,15 +25,8 @@ class RegisterActivity : AppCompatActivity() {
             val password = passwordEditText.text.toString()
             val gender = findViewById<RadioButton>(genderGroup.checkedRadioButtonId).text.toString()
 
-            lifecycleScope.launch {
-                val user = UserEntity(
-                    login = login,
-                    username = username,
-                    password = password,
-                    gender = gender
-                )
-                userDatabase.userDao().insert(user)
-            }
+            // Для lab5 - простое сохранение без БД
+            // Здесь можно добавить логику для сохранения в SharedPreferences или просто показать успех
         }
     }
 }

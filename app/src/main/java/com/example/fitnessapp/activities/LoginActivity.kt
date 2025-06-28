@@ -7,14 +7,10 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import com.example.fitnessapp.R
 import com.example.fitnessapp.helpers.SessionManager
-import com.example.fitnessapp.database.UserDatabase
-import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var userDatabase: UserDatabase
     private lateinit var sessionManager: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +22,6 @@ class LoginActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.login_button)
         val backArrow = findViewById<ImageView>(R.id.back_arrow)
 
-        userDatabase = UserDatabase.getDatabase(this)
         sessionManager = SessionManager(this)
 
         backArrow.setOnClickListener {
@@ -42,19 +37,9 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            lifecycleScope.launch {
-                val user = userDatabase.userDao().findUserByLoginAndPassword(login, password)
-                if (user != null) {
-                    sessionManager.createLoginSession(login)
-                    navigateToEmptystateActivity()
-                } else {
-                    Toast.makeText(
-                        this@LoginActivity,
-                        "Неверный логин или пароль",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }
+            // Для lab5 - простое логирование без проверки в БД
+            sessionManager.createLoginSession(login)
+            navigateToEmptystateActivity()
         }
     }
 

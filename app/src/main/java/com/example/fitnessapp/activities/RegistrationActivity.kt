@@ -9,16 +9,10 @@ import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.lifecycleScope
 import com.example.fitnessapp.R
-import com.example.fitnessapp.entities.UserEntity
 import com.example.fitnessapp.helpers.SessionManager
-import com.example.fitnessapp.database.UserDatabase
-import kotlinx.coroutines.launch
-
 
 class RegistrationActivity : AppCompatActivity() {
-    private lateinit var userDatabase: UserDatabase
     private lateinit var sessionManager: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +27,6 @@ class RegistrationActivity : AppCompatActivity() {
         val registerButton = findViewById<Button>(R.id.register_button)
         val backArrow = findViewById<ImageView>(R.id.back_arrow)
 
-        userDatabase = UserDatabase.getDatabase(this)
         sessionManager = SessionManager(this)
 
         backArrow.setOnClickListener {
@@ -55,26 +48,9 @@ class RegistrationActivity : AppCompatActivity() {
             val gender = findViewById<RadioButton>(genderId)?.text.toString()
 
             if (password == repeatPassword) {
-                lifecycleScope.launch {
-                    val existingUser = userDatabase.userDao().findUserByLogin(login)
-                    if (existingUser != null) {
-                        Toast.makeText(
-                            this@RegistrationActivity,
-                            "Логин уже существует",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    } else {
-                        val user = UserEntity(
-                            login = login,
-                            username = username,
-                            password = password,
-                            gender = gender
-                        )
-                        userDatabase.userDao().insert(user)
-                        sessionManager.createLoginSession(login)
-                        navigateToEmptystateActivity()
-                    }
-                }
+                // Для lab5 - простое сохранение без БД
+                sessionManager.createLoginSession(login)
+                navigateToEmptystateActivity()
             } else {
                 Toast.makeText(this, "Пароли не совпадают", Toast.LENGTH_SHORT).show()
             }
