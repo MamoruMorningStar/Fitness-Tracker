@@ -263,3 +263,4 @@ public final class ActivityDao_Impl implements ActivityDao {
     return Collections.emptyList();
   }
 }
+
